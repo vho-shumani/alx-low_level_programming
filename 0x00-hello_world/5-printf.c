@@ -1,8 +1,10 @@
 #include <stdio.h>
 /**
  * main - Entry point
- *printf - print out the exact string
- * return: Always 0 (success)
+ *
+ * Description: program prints out the string in the parentheses
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
