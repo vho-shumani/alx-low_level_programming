@@ -1,18 +1,18 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 /**
  * main - Entry point
  *
- * Description: prints the last digit of random number.
+ * Description: program prints out lowercase alphabets
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	for (char c = 'a'; c <= 'z'; c++)
+	char c = 'a';
+	while (c <= 'z')
 	{
 		putchar(c);
+		c++;
 	}
 	putchar('\n');
 	return (0);
