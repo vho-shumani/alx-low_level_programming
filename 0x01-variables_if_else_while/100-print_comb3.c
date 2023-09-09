@@ -16,8 +16,8 @@ int main()
 				putchar('0' + C);
 				putchar(',');
 				putchar(' ');
-				C++;
 			}
+			C++;
 		}
 		c++;
 	}
