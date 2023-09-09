@@ -20,22 +20,22 @@ int main(void)
 
 			if (c != i && c < i)
 			{
-				while (x <= 9)
+			while (x <= 9)
+			{
+				if (i != x && i < x)
 				{
-					if (i != x && i < x)
-					{
-						putchar('0' + c);
-						putchar('0' + i);
-						putchar('0' + x);
-						if (c != 7 || i != 8 || x != 9)
-						{
-							putchar(',');
-							putchar(' ');
-						}
-
-					}
-					x++;
+					putchar('0' + c);
+					putchar('0' + i);
+					putchar('0' + x);
+				if (c != 7 || i != 8 || x != 9)
+				{
+					putchar(',');
+					putchar(' ');
 				}
+
+				}
+				x++;
+			}
 
 			}
 			i++;
