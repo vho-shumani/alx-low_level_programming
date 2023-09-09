@@ -11,7 +11,7 @@ int main(void)
 
 		while (C <= 9)
 		{
-			if (C != c && c < C)
+			if (c != C && C < c)
 			{
 				putchar('0' + c);
 				putchar('0' + C);
