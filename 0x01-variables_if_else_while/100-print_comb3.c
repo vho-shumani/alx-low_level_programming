@@ -15,9 +15,11 @@ int main(void)
 			{
 				putchar('0' + c);
 				putchar('0' + C);
-				if (c != 8 && C != 9)
+				if (c != 8 || C != 9)
+				{
 					putchar(',');
 					putchar(' ');
+				}
 			}
 			C++;
 		}
