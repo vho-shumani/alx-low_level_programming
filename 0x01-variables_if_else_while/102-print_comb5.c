@@ -1,21 +1,46 @@
+nclude <stdio.h>
+#include <stdlib.h>
 
-#include <stdio.h>
-/**
- * main -Entry point
- *
- * description: prints all possible combination of 4 numbers.
- *
- * Return: Always 0 (Success)
- */
-int main(void)
+int main()
 {
-	int c = 0;
+    int a = 0;
 
-	while (c <= 9)
-	{
-		putchar(c);
-		c++;
-	}
+    while (a <= 9)
+    {
+        int b = 0;
+
+        while (b <= 9)
+        {
+            int c = 0;
+
+            while (c <= 9)
+            {
+                int d = 0;
+
+                while (d <= 9)
+                {
+                    if ((b < d && a <= c) || (b == 0 && d == 0))
+                    {
+                        putchar('0' + a);
+                        putchar('0' + b);
+                        putchar(' ');
+                        putchar('0' + c);
+                        putchar('0' + d);
+                        if (a != 9 || b != 8 || c != 9 || d != 9 )
+                        {
+                            putchar(',');
+                            putchar(' ');
+                        }
+                    }
+                    d++;
+                }
+                c++;
+            }
+            b++;
+        }
+        a++;
+    }
     putchar('\n');
-    return (0);
+    return 0;
 }
+
