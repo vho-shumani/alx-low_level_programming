@@ -19,7 +19,7 @@ int main()
 
                 while (d <= 9)
                 {
-                    if ((b < d && a <= c) || (b == 0 && d == 0))
+                    if ((b < d && a <= c) || (b == 0 && d == 0 && a== 0 && c ==1))
                     {
                         putchar('0' + a);
                         putchar('0' + b);
