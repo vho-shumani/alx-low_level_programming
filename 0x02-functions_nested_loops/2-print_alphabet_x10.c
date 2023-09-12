@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * main - check the code.
- *
- * Return: Always 0.
- */
+* print_alphabet_x10 - prints out all letters 10 times.
+*
+* Return:void doesnot return anything.
+*/
 void print_alphabet_x10(void)
 {
 	int count = 0;
