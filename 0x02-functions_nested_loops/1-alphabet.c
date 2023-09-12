@@ -1,10 +1,6 @@
 #include "main.h"
 /**
-*main - Entry point
-*
-*Description: prints the alphabets in lowercase.
-*
-*Return: Always 0 (Success).
+*print_alphabet - writes all the alphabets in lowercase and new line to stdout.
 */
 void print_alphabet(void)
 {
@@ -16,5 +12,4 @@ void print_alphabet(void)
 		c++;
 	}
 	_putchar('\n');
-	
 }
