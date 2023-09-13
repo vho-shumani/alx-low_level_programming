@@ -19,7 +19,10 @@ void times_table(void)
 
 		if (total < 10)
 		{
-			_putchar(' ');
+			if (b != 0)
+			{
+				_putchar(' ');
+			}
 			_putchar(total + '0');
 			b++;
 		}
