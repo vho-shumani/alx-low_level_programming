@@ -29,8 +29,11 @@ void times_table(void)
 			_putchar((total % 10) + '0');
 			b++;
 		}
-		_putchar(',');
-		_putchar(' ');
+		if (b < 10)
+		{
+			_putchar(',');
+			_putchar(' ');
+		}
 
 	}
 	_putchar('\n');
