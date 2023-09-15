@@ -14,7 +14,7 @@ void print_diagonal(int n)
 	{
 		int i = 1;
 
-		while (i <= a)
+		while (i < a)
 		{
 			_putchar(' ');
 			i++;
