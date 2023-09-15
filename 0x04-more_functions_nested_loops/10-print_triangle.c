@@ -17,7 +17,7 @@ void print_triangle(int size)
 
 		while (c < size)
 		{
-			_putchar('.');
+			_putchar(' ');
 			c++;
 		}
 		while (b <= a)
