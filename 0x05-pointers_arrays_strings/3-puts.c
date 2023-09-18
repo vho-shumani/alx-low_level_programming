@@ -1,0 +1,22 @@
+#include "main.h"
+#include <string.h>
+#include <stdio.h>
+/**
+*_puts - print the inputed string.
+*@str: the string.
+*
+*
+*Return: void.
+*/
+void _puts(char *str)
+{
+	int len = strlen(str);
+	int i = 0;
+
+	while (i <= len)
+	{
+		putchar(str[i]);
+		printf("\n");
+		i++;
+	}
+}
