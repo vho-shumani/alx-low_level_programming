@@ -8,15 +8,13 @@
 *
 *Return: void.
 */
+
 void _puts(char *str)
 {
-	int len = _strlen(str);
-	int i = 0;
 
-	while (i < len)
+	while (*str != '\0')
 	{
-		_putchar(str[i]);
-		i++;
+		_putchar(str++);
 	}
 	_putchar('\n');
 }
