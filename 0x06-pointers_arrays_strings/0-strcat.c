@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
 *_strcat - concatenates two string
 *@dest: the string which the other string is added onto.
@@ -25,11 +27,6 @@ char *_strcat(char *dest, char *src)
 		src++;
 	}
 	ptr = '\0';
-	while (*dest != '\0')
-	{
-		len++;
-		dest++;
-	}
 	while (i < len)
 	{
 		_putchar(dest[i]);
