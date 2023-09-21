@@ -9,19 +9,17 @@
 */
 void reverse_array(int *a, int n)
 {
-	int s[100];
+	int *ptr = a;
+	int x;
 	int i = 0;
-	int x = 0;
+	int diff = n - 1;
 
-	while(i < n)
+	while(i < (n / 2))
 	{
-		s[i] = a[(n-1) - i];
+		x = *(ptr + i);
+		*(ptr + i) = *(ptr + diff);
+		*(ptr + diff) = x;
+		diff--;
 		i++;
-	}
-
-	while (x < n)
-	{
-		a[x] = s[x];
-		x++;
 	}
 }
