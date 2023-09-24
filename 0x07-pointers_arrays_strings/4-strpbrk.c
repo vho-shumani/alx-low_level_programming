@@ -9,15 +9,15 @@
 */
 char *_strpbrk(char *s, char *accept)
 {
-	int count = 0;
-
 	while (*s != '\0')
 	{
+		int count = 0;
+
 		while (*accept != '\0')
 		{
 			if (*s == *accept)
 			{
-			return (s);
+				return (s);
 			}
 			count++;
 			accept++;
