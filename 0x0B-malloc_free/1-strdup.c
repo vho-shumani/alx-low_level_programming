@@ -3,7 +3,6 @@
 /**
 *_strdup - function returns a pointer to a new string which is a duplicate of.
 *@str: string
-*
 *Return: pointer to the duplicated string.
 */
 char *_strdup(char *str)
@@ -12,15 +11,19 @@ char *_strdup(char *str)
 	int i = 0;
 	int len = 0;
 
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 	while (*str != '\0')
 	{
 		len++;
 		str++;
 	}
-	ptr = (char *) malloc(sizeof(char) * len);
-	if (str == NULL || ptr == NULL)
+	ptr = (char *) malloc(sizeof(char) * len + 1);
+	if (ptr == NULL)
 	{
-		return NULL;
+		return (NULL);
 	}
 	str = str - len;
 	while (i < len)
@@ -28,6 +31,6 @@ char *_strdup(char *str)
 		ptr[i] = str[i];
 		i++;
 	}
-	return ptr;
+	return (ptr);
 	free(ptr);
-}	
+}
