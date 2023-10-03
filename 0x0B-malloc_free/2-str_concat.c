@@ -9,13 +9,18 @@
 */
 char *str_concat(char *s1, char *s2)
 {
-	int len1 = 0;
-	int len2 = 0;
-	int i = 0;
-	int x =0;
+	int len1, len2, x, i = 0;
 	char *ptr;
 	int max_len;
 
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}	
 	while (*s1 != '\0')
 	{
 		s1++;
