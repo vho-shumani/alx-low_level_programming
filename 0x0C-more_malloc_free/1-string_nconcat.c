@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  * _strlen - determine the length of string.
- * @c - string
+ * @c: string
  *
  * Return: the size of string(success).
  */
@@ -44,8 +44,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
 	if (n > len2)
-		ptr =(char *)malloc(sizeof(char) * (len1 + len2));
-	else 
+		ptr = (char *)malloc(sizeof(char) * (len1 + len2));
+	else
 		ptr = malloc(sizeof(char) * (len1 + n));
 	if (ptr == NULL)
 	{
@@ -57,19 +57,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		{
 			ptr[i] = s1[i];
 		}
-		else 
+		else
 		{
 			ptr[i] = s2[x];
 			x++;
 		}
-		
 	}
-
+	ptr[i] = '\0';
 	return (ptr);
 }
-
-
-	
-
-
-
