@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - Entry point 
+ * main - Entry point
  * @argc: number of argumnets.
  * @argv: array
  *
@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 	{
 		printf("Error\n");
-		exit (98);
+		exit(98);
 	}
 	for (a = 1; a < argc; a++)
 	{
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 			if (!isdigit(argv[a][b]))
 			{
 				printf("Error\n");
-				exit (98);
+				exit(98);
 			}
 		}
 	}
