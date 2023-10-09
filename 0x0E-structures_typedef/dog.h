@@ -6,13 +6,15 @@
  * @age: second member of type float.
  * @owner: third member of type char.
  *
- * Description: the structure or type will represent the different detail of a dog
+ * Description: type will represent the different detail of a dog
  */
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
+} dog_t;
 void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+dog_t *new_dog(char *name, float age, char *owner);
 #endif
