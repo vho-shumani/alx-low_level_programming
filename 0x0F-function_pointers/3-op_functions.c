@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include <stddef.h>
+#include "3-calc.h"
+#include <stdlib.h>
 /**
  * op_add - adds two interger together.
  * @a: fist number
@@ -6,7 +10,8 @@
  */
 int op_add(int a, int b)
 {
-	return (a + b)
+	printf("%d\n", a + b);
+	return (0);
 }
 
 /**
@@ -18,7 +23,8 @@ int op_add(int a, int b)
 
 int op_sub(int a, int b)
 {
-	return (a - b);
+	printf("%d\n", a - b);
+	return (0);
 }
 
 /**
@@ -30,7 +36,8 @@ int op_sub(int a, int b)
 
 int op_mul(int a, int b)
 {
-	return (a * b);
+	printf("%d\n", a * b);
+	return (0);
 }
 
 /**
@@ -42,7 +49,13 @@ int op_mul(int a, int b)
 
 int op_div(int a, int b)
 {
-	return (a / b);
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	printf("%d\n", a / b);
+	return (0);
 }
 
 /**
@@ -54,5 +67,11 @@ int op_div(int a, int b)
 
 int op_mod(int a, int b)
 {
-	return (a % b);
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	printf("%d\n", a % b);
+	return (0);
 }
