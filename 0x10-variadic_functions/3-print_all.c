@@ -11,11 +11,10 @@ void print_all(const char * const format, ...)
 	const char *format_ptr = format;
 	char *i;
 	va_list list;
+
 	va_start(list, format);
-	 
 	while (*format_ptr != '\0')
 	{
-		
 		switch (*format_ptr)
 		{
 			case 'c':
@@ -38,7 +37,8 @@ void print_all(const char * const format, ...)
 				break;
 		}
 		format_ptr++;
-		if (*format_ptr != '\0' && (*format_ptr == 'c' || *format_ptr == 'i' || *format_ptr == 'f' || *format_ptr == 's'))
+		if (*format_ptr != '\0' && (*format_ptr == 'c' || *format_ptr == 'i' ||
+			*format_ptr == 'f' || *format_ptr == 's'))
 			printf(", ");
 	}
 	va_end(list);
