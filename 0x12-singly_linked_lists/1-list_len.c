@@ -11,9 +11,9 @@ size_t list_len(const list_t *h)
 		
 	while (temp != NULL)
 	{
+		temp = temp->next;
 		count++;
 	}
-	printf("%ld", count);
 	return (count);
 }
 
