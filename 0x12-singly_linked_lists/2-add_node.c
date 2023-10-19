@@ -10,7 +10,7 @@ int _strlen(const char *str)
 {
 	unsigned int count = 0, i;
 
-	for(i = 0 ;str[i] != '\0'; i++)
+	for (i = 0 ; str[i] != '\0'; i++)
 	{
 		count++;
 	}
@@ -24,11 +24,11 @@ int _strlen(const char *str)
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *new = malloc(sizeof(list_t)); 
+	list_t *new = malloc(sizeof(list_t));
 
 	if (new == NULL)
 	{
-		return NULL;
+		return (NULL);
 	}
 	new->str = strdup(str);
 	new->len = _strlen(str);
