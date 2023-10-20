@@ -1,15 +1,16 @@
 #include "lists.h"
 /**
- * Use constructor attribute so that the function executes before main.
+ * print_message - prints a string to stdout due to constructor.
  */
 void print_message(void)__attribute__((constructor));
 
 /**
- * print_meassage - print a string before main function.
+ * print_message - print a string before main function.
  * Return: noting.
  */
 
 void print_message(void)
 {
-	printf("You're beat! and yet, you must allow,\nI bore my house upon my back!\n");
+	printf("You're beat! and yet, you must allow,");
+	printf("I bore my house upon my back!\n");
 }
