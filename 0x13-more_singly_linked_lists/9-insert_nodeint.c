@@ -26,7 +26,7 @@ size_t listint_len(const listint_t *h)
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *tmp = *head, *new = malloc(sizeof(listint_t));
-	unsigned int i, num = listint_len(*head);
+	unsigned int i;
 
 	new->n = n;
 	if (new == NULL)
