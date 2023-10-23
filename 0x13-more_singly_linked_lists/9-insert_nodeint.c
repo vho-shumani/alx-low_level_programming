@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdlib.h>
 /**
  * listint_len - determines the number of element in a list.
  * @h: list
@@ -32,15 +33,24 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	{
 		return (NULL);
 	}
-	new->n = n;
 	if (new == NULL)
 	{
 		return (NULL);
 	}
-
-	for (i = 1; i < idx; i++)
+	new->n = n;
+	for (i = 0; i < (idx - 1); i++)
 	{
+		if(tmp == NULL)
+		{
+			free(new);
+			return (NULL);
+		}
 		tmp = tmp->next;
+	}
+	if (tmp == NULL)
+	{
+		free(new);
+		return (NULL);
 	}
 	new->next = tmp->next;
 	tmp->next = new;
