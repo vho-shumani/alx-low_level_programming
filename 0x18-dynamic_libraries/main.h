@@ -20,5 +20,10 @@ char *_strchr(char *s, char c);
 unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
+int add(int n1, int n2);
+int sub(int n1, int n2);
+int mul(int n1, int n2);
+int div(int n1, int n2);
+int mod(int n1, int n2);
 
 #endif
