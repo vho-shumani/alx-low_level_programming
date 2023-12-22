@@ -1,0 +1,1 @@
+0x1A. C - Hash tables: task focuses on tasks on hast table and hash function.
