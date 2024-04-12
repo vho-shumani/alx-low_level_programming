@@ -1,6 +1,6 @@
 #include "search_algos.h"
 /**
- * searches for a value in a sorted array of intergers.
+ * exponential_search - searche for a value in a sorted array of intergers.
  * @array: array to search for the calue.
  * @size: size of the array.
  * @value: value to find.
@@ -8,25 +8,23 @@
  */
 int exponential_search(int *array, size_t size, int value)
 {
-	size_t bound = 0, start, end, mid, i;
+	size_t bound = 1, start, end, mid, i;
 
 	if (array == NULL)
-		return -1;
-	if (array[bound] == value )
-		return bound;
-	else
-		bound = 1;
+		return (-1);
+	if (array[0] == value)
+		return (0);
 	while (bound < size && array[bound] <= value)
 	{
 		printf("Value checked array[%ld] = [%d]\n", bound, array[bound]);
 		bound *= 2;
 	}
-	start = bound/ 2;
+	start = bound / 2;
 	if (bound >= size)
 		end = size - 1;
 	else
 		end = bound;
-	printf("Value found between indexes [%ld] and [%ld]\n", start, end);	
+	printf("Value found between indexes [%ld] and [%ld]\n", start, end);
 	while (start <= end)
 	{
 		mid = (start + end) / 2;
