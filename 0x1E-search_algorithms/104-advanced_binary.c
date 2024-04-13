@@ -11,6 +11,8 @@ int recursive_binary(int *array, size_t start, size_t end, int value)
 {
 	size_t i, mid = (start + end) / 2;
 
+	if (start > end)
+		return (-1);
 	printf("Searching in array: ");
 	for (i = start; i <= end; i++)
 	{
@@ -20,8 +22,6 @@ int recursive_binary(int *array, size_t start, size_t end, int value)
 		else
 			printf("\n");
 	}
-	if (start > end)
-		return (-1);
 	if (array[mid] == value)
 	{
 		if (mid == 0 || array[mid - 1] != value)
